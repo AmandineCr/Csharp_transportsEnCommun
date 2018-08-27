@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TransportEncommun
 {
@@ -17,5 +14,30 @@ namespace TransportEncommun
 
         public static Station[] FromJson(string json) => JsonConvert.DeserializeObject<Station[]>(json, Converter.Settings);
 
+        public override bool Equals(object obj)
+        {
+            var station = obj as Station;
+            return station != null &&
+                   name == station.name;
+        }
+
+        public override string ToString()
+        {
+            return $@"Arrêt : {name} 
+                Lignes : {linesToString()}"; // arret : victor Hugo
+                                             // Lignes : 18, 17                                                
+        }
+
+        private string linesToString()
+        {
+            string stationInfos= "";
+
+            foreach (string line in lines) {
+                stationInfos += line; // === // stationInfos = stationInfos + line
+            }
+            //lines.ForEach(delegate (String name)
+
+            return stationInfos;
+        }
     }
 }

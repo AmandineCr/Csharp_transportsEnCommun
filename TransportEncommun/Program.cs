@@ -33,13 +33,11 @@ namespace TransportEncommun
 
             Station[] Stations = Station.FromJson(responseFromServer);
 
-            //for (Station Stations = 0; Stations[] ; Stations++){
+            int i;
+            for (i= 0; i < Stations.Length ; i++){
+               Console.WriteLine(Stations[i]);
+            }
 
-            //}
-
-            //Console.WriteLine(Stations[].name);
-
-           
             Console.ReadKey();
 
 
