@@ -28,7 +28,7 @@ namespace TransportEncommun
                                              // Lignes : 18, 17                                                
         }
 
-        private string linesToString()
+        public string linesToString()
         {
             string stationInfos= "";
 
