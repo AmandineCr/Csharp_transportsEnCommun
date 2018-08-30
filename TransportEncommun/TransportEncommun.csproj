@@ -61,6 +61,10 @@
       <Project>{4751b311-fa35-4b93-a963-93c0ca9bfa5e}</Project>
       <Name>StationLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Wpf_MVVM\Wpf_MVVM.csproj">
+      <Project>{44ce7bee-5d17-46e2-9f91-d3048ced8cfe}</Project>
+      <Name>Wpf_MVVM</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
